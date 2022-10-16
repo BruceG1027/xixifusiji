@@ -115,6 +115,20 @@ a {
   border-radius: 26px;
 }
 
+/* 底栏 */
+.copyRight {
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.copyRight p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: rgb(96, 93, 93);
+}
+
 /* 屏幕宽度小于1200px时要改变的样式 */
 @media (max-width: 1200px) {
   .websiteLinksRow1,
@@ -147,7 +161,7 @@ a {
   .websiteLinksRow1,
   .websiteLinksRow2,
   .websiteLinksRow3 {
-    margin: 0 100px 105px 100px;
+    margin: 0 40px 105px 40px;
   }
 
   .websiteLink {
@@ -167,18 +181,30 @@ a {
     height: 40px;
     border-radius: 10px;
   }
-}
 
-/* 底栏 */
-.copyRight {
-  position: absolute;
-  bottom: 0px;
-  transform: translateX(-50%);
-  left: 50%;
-}
+  .searchBar input {
+    width: 170px;
+    height: 35px;
+    padding: 0 0 0 16px;
+    font-size: 16px;
+  }
 
-.copyRight p {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: rgb(96, 93, 93);
+  @keyframes searchBarScrach {
+    from {
+      width: 170px;
+      background: rgba(35, 35, 35, 0.75);
+    }
+    to {
+      width: 255px;
+      background: rgba(20, 20, 20, 0.75);
+    }
+  }
+
+  .searchBar .searchButton {
+    position: absolute;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+  }
 }

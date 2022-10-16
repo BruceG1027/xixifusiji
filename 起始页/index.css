@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* 时间部分 */
+.time {
+  font-family: bold;
+  font-size: 40px;
+  margin: 30px auto;
+  color: #4b4b4b;
+}
+
+/* 搜索框部分 */
+.searchBar {
+  position: relative;
+  margin: 0px auto;
+  margin-bottom: 65px;
+}
+
+.searchBar input {
+  width: 325px;
+  height: 65px;
+  padding-left: 25px;
+  padding-right: 65px;
+  border: 0.5px solid rgba(35, 35, 35, 0.75);
+  border-radius: 60px;
+  background: rgba(35, 35, 35, 0.75);
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px 5px;
+  font-size: 20px;
+  color: #cbcbcb;
+}
+
+@keyframes searchBarScrach {
+  from {
+    width: 325px;
+    background: rgba(35, 35, 35, 0.75);
+  }
+  to {
+    width: 725px;
+    background: rgba(20, 20, 20, 0.75);
+  }
+}
+.searchBar:hover input {
+  animation: searchBarScrach 0.15s ease-in forwards;
+}
+
+.searchBar .searchButton {
+  position: absolute;
+  right: 0px;
+  width: 65px;
+  height: 65px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 60px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 50px;
+  color: #cbcbcb;
+}
+
+.icon-arrow_right {
+  font-size: 30px;
+}
+
+/* 网站链接部分 */
+.websiteLink {
+  width: 100px;
+  height: 100px;
+  border-radius: 26px;
+  background: rgba(35, 35, 35, 1);
+  box-shadow: rgb(0 0 0 / 10%) 2px 0px 4px 1px, rgb(0 0 0 / 10%) 0px 2px 4px 1px,
+    rgb(0 0 0 / 10%) -2px 0px 4px 1px, rgb(0 0 0 / 4%) 0px 0px 8px 4px inset,
+    rgb(0 0 0 / 2%) 0px 0px 16px 4px inset;
+}
+
+.websiteLinksRow1,
+.websiteLinksRow2,
+.websiteLinksRow3 {
+  margin: 0 240px 105px 240px;
+  justify-content: space-around;
+}
+
+.websiteLink:hover {
+  box-shadow: rgb(0 0 0 / 20%) 2px 0px 10px 1px,
+    rgb(0 0 0 / 20%) 0px 2px 10px 1px, rgb(0 0 0 / 20%) -2px 0px 10px 1px,
+    rgb(0 0 0 / 8%) 0px 0px 8px 10px inset,
+    rgb(0 0 0 / 4%) 0px 0px 16px 10px inset;
+}
+
+.websiteLink a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 26px;
+}
+
+.websiteLink a img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 26px;
+}
+
+/* 屏幕宽度小于1200px时要改变的样式 */
+@media (max-width: 1200px) {
+  .websiteLinksRow1,
+  .websiteLinksRow2,
+  .websiteLinksRow3 {
+    margin: 0 140px 105px 140px;
+  }
+
+  .websiteLink {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .websiteLink a {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .websiteLink a img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+}
+
+/* 屏幕宽度小于1200px时要改变的样式 */
+@media (max-width: 768px) {
+  .websiteLinksRow1,
+  .websiteLinksRow2,
+  .websiteLinksRow3 {
+    margin: 0 100px 105px 100px;
+  }
+
+  .websiteLink {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .websiteLink a {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .websiteLink a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+
+/* 底栏 */
+.copyRight {
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.copyRight p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: rgb(96, 93, 93);
+}

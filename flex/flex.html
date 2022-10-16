@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex布局</title>
+    <link rel="stylesheet" href="./flex.css" />
+    <link rel="stylesheet" href="./font/iconfont.css" />
+  </head>
+
+  <body class="flex">
+    <!-- 侧边 -->
+    <div
+      style="width: 200px; overflow: auto; height: 100%; z-index: 3"
+      class="ceiBian white yinYing"
+    >
+      <div
+        style="
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          src="../head.png"
+          alt="logo"
+          style="width: 40px; border-radius: 50%"
+        />
+        <div style="margin-left: 10px; color: #d3d3d3">xxx</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+      </div>
+    </div>
+    <!-- 主边 -->
+    <div class="flex1 flex column">
+      <!-- 顶部区域 -->
+      <div style="height: 60px; z-index: 2" class="white yinYing"></div>
+      <!-- 内容区域 -->
+      <div class="flex flex1 neiRong" style="overflow: auto; padding-left: 8px">
+        <!-- 主体内容 -->
+        <div style="flex: 3" class="zhuTiNeiRong flex column mgt8">
+          <!-- 成品区 -->
+          <div class="shuJuQuBiaoTi fanLiWenZi mgb8"><b>作品</b></div>
+          <div class="shuJuQu flex">
+            <div class="flex1 white shuJu mgr8 yinYing fanLiWenZi flex">
+              <a
+                href="./myDemo/dianzan.html"
+                class="flex flex1"
+                style="align-items: center; justify-content: center"
+              >
+                <span class="fanLiWenZi">点赞案例</span>
+              </a>
+            </div>
+            <div class="flex1 white shuJu mgr8 yinYing fanLiWenZi flex">
+              <a
+                href="./myDemo/xiaoMi/xiaomi.html"
+                class="flex flex1"
+                style="align-items: center; justify-content: center"
+              >
+                <span class="fanLiWenZi">小米图标</span>
+              </a>
+            </div>
+            <div class="flex1 white shuJu mgr8 yinYing fanLiWenZi flex">
+              <a
+                href="./myDemo/letter/_520.html"
+                class="flex flex1"
+                style="align-items: center; justify-content: center"
+              >
+                <span class="fanLiWenZi">信纸案例</span>
+              </a>
+            </div>
+            <div class="flex1 white shuJu gengDuo yinYing fanLiWenZi flex">
+              <a
+                href=""
+                class="flex flex1"
+                style="align-items: center; justify-content: center"
+              >
+                <div class="iconfont icon-arrow_right fanLiWenZi"></div>
+                <span class="fanLiWenZi">更多</span>
+              </a>
+            </div>
+          </div>
+          <!-- 列表区 -->
+          <div class="lieBiaoQuBiaoTi fanLiWenZi mgt8"><b>文章</b></div>
+          <div class="flex column">
+            <div class="lieBiaoXiang white mgt8 yinYing fanLiWenZi">列表</div>
+            <div class="lieBiaoXiang white mgt8 yinYing fanLiWenZi">列表</div>
+            <div class="lieBiaoXiang white mgt8 yinYing fanLiWenZi">列表</div>
+            <div class="lieBiaoXiang white mgt8 yinYing fanLiWenZi">列表</div>
+            <div class="lieBiaoXiang white mgt8 yinYing fanLiWenZi flex">
+              <a
+                href=""
+                class="flex flex1"
+                style="align-items: center; justify-content: center"
+              >
+                <div class="iconfont icon-arrow_down fanLiWenZi"></div>
+                <span class="fanLiWenZi">更多</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 侧边内容 -->
+        <div class="ceiBianNeiRong flex1 mg8 flex column">
+          <div class="flex1">
+            <!-- 提示区 -->
+            <div style="height: 300px" class="tiShi white yinYing fanLiWenZi">
+              提示区
+            </div>
+            <!-- 消息区 -->
+            <div
+              style="height: 450px"
+              class="xiaoXi white mgt8 yinYing fanLiWenZi"
+            >
+              消息区
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

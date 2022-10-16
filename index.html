@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>西西弗斯基</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* flex布局 */
+        .flex {
+            display: flex;
+        }
+
+        .head {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .head img {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        .content {
+            /* background-color: pink; */
+            max-width: 700px;
+            margin: 30px auto;
+            line-height: 50px;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .bottom {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 40px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <img src="./head.png" alt="">
+    </div>
+    <div class="content flex column">
+        <a href="./flex/flex.html">我的flex布局</a>
+        <a href="./起始页/index.html">我的起始页</a>
+        <!-- <p style="font-size: 30px;"><b>Hi!</b></p>
+        <p>这里是<b style="font-size: 20px;">西西弗斯基</b></p>
+        <p>欢迎来到我的网站</p> -->
+    </div>
+    <div class="bottom">
+        <p>我的网站</p>
+        <a href="https://kangwenchang.com/">友情链接</a>
+    </div>
+</body>
+
+</html>

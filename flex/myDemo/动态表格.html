@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态表格</title>
+    <style>
+      table {
+        width: 600px;
+        height: 400px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      thead tr {
+        height: 40px;
+        background-color: #ccc;
+      }
+
+      a {
+        color: red;
+        text-decoration: underline black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>科目</th>
+          <th>成绩</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      // 准备数据
+      let datas = [
+        {
+          name: "Mark",
+          subject: "javascript",
+          score: "A",
+        },
+        {
+          name: "Jessie",
+          subject: "javascript",
+          score: "B",
+        },
+        {
+          name: "Tony",
+          subject: "javascript",
+          score: "A+",
+        },
+        {
+          name: "Guru",
+          subject: "javascript",
+          score: "F",
+        },
+        {
+          name: "Yougurt",
+          subject: "javascript",
+          score: "C",
+        },
+        {
+          name: "Nova",
+          subject: "javascript",
+          score: "B-",
+        },
+      ];
+      //
+      let tbody = document.querySelector("tbody");
+      for (let i = 0; i < datas.length; i++) {
+        // 多少人便创造多少行
+        let tr = document.createElement("tr");
+        // 创造
+        tbody.appendChild(tr);
+        // 添加
+        let ftd = document.createElement("td");
+        ftd.innerHTML = i + 1;
+        tr.appendChild(ftd);
+        for (let k in datas[i]) {
+          let td = document.createElement("td");
+          // 创造
+          td.innerHTML = datas[i][k];
+          // 内容
+          tr.appendChild(td);
+          // 添加
+        }
+        let td = document.createElement("td");
+        td.innerHTML = '<a herf="javascript:;">删除</a>';
+        tr.appendChild(td);
+      }
+
+      // 删除操作
+      let as = document.querySelectorAll("a");
+      // console.log(typeof(as));
+      for (let i = 0; i < as.length; i++) {
+        as[i].onclick = function () {
+          tbody.removeChild(this.parentNode.parentNode); // 删除一行
+          // 重新排序 使得序号排序正确 因为要点击后执行 不能一开始执行 所以放在function中
+          let as = document.querySelectorAll("a"); //重新统计行数
+          for (let k = 0; k < as.length; k++) {
+            let ftd = document.querySelector("tbody").children[k].children[0];
+            ftd.innerHTML = k + 1;
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

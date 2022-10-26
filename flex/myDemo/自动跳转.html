@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自动跳转</title>
+  </head>
+  <body>
+    <div class="box">
+      <button>点击</button>
+      <div class="notice"></div>
+    </div>
+    <script>
+      let btn = document.querySelector("button");
+      let notice = document.querySelector(".notice");
+      // 点击按钮跳转
+      btn.addEventListener("click", function () {
+        // console.log(location.href);
+        location.href = "../flex.html";
+      });
+      // 倒计时按钮
+      let timer = 5;
+      function countDown() {
+        if (timer == 0) {
+          location.href = "../flex.html";
+        } else {
+          notice.innerHTML = "还有" + timer + "秒跳转链接";
+          timer--;
+        }
+      }
+      countDown(); // 先运行一次，避免有空格（第一次运行也要1000ms）
+      setInterval(countDown, 1000); // 注意不要加括号
+    </script>
+  </body>
+</html>
